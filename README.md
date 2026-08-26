@@ -50,3 +50,5 @@ I did not add flexbox or change colors. I did not make it responsive as well. I 
 Next Sprint
 
 Next, I’ll make the website responsive to all devices. Fix the layout of the text, like the font size, and images. Also to fix the spacing and padding as well.
+
+https://paris-clouds.github.io/legacy-modernization/
