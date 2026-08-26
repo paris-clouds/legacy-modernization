@@ -7,21 +7,33 @@ body {
   margin-bottom: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  background-color:#E8E1C9;
+  color:#333333;
 }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
+  font-size: "2";
 }
-
+b {
+  color: #315C3D;
+  font-size:"2";
+}
 .intro {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 23px;
   color: #4C5148;
 }
-
+h1 {
+  font-family:"Georgia, Times New Roman, serif"; 
+  size:"6"; 
+  color:#315C3D;
+  width:420; 
+  align-self:top;
+}
 h2 {
   font-family: Georgia, "Times New Roman", serif;
   color: #315C3D;
@@ -40,6 +52,9 @@ a:hover {
 .navcell {
   background-color: #315C3D;
   height: 34px;
+  align-items: center;
+  width:200px;
+  height: 20px;
 }
 
 .navcell a {
@@ -89,4 +104,16 @@ a:visited {
 
 a:active {
   color: #993300;
+}
+.contact-info {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 2;
+}
+.aside {
+  border:0; 
+  border-spacing:0; 
+  padding-top:5; 
+  background-color:#F4EAC8;
+  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 2;
 }
