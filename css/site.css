@@ -102,7 +102,10 @@ a:visited {
 a:active {
   color: #993300;
 }
-.contact-info {
+.contact-info { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Arial, Helvetica, sans-serif";
   font-size: 14px;
   width:450px;
@@ -159,6 +162,11 @@ background-color: #F8F4E7;
   border-spacing: 0;
   padding-top: 0;
 }
+.content-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+}
 .footer-bar {
   column-span:3;
   height:12;
@@ -174,4 +182,22 @@ background-color: #F8F4E7;
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 20px;
+}
+.hero > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.about-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.about-layout .spacer {
+  flex-shrink: 0;
+}
+.about-layout img {
+  display: block;
+  border: 1px solid #9E9475;
 }
