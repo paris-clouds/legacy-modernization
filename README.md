@@ -52,3 +52,5 @@ Next Sprint
 Next, I’ll make the website responsive to all devices. Fix the layout of the text, like the font size, and images. Also to fix the spacing and padding as well.
 
 https://paris-clouds.github.io/legacy-modernization/
+
+WEEK 3, SPRINT 2
