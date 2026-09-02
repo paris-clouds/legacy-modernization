@@ -11,6 +11,9 @@ body {
   color:#333333;
 }
 
+main {
+  padding: 0 20px 30px;
+}
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -27,12 +30,18 @@ b {
   line-height: 23px;
   color: #4C5148;
 }
+.site-header {
+  padding: 18px 40px;
+  background-color: #F4EAC8;
+}
 h1 {
-  font-family:"Georgia, Times New Roman, serif"; 
-  font-size: 3rem; 
-  color:#315C3D;
+  font-family:Georgia, Times New Roman, serif; 
   max-width:420px; 
   align-self:top;
+  margin: 0 0 20px;
+  font-size: 48px;
+  line-height: 1.05;
+  color: #315C3D;
 }
 h2 {
   font-family: Georgia, "Times New Roman", serif;
@@ -47,11 +56,12 @@ a:hover {
 
 .navcell {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   background-color: #315C3D;
-  width: 120px;
-  height: 34px;
+  width: auto;
+  height: 42px;
 }
 
 .navcell a {
@@ -108,17 +118,24 @@ a:active {
   align-items: center;
   font-family: "Arial, Helvetica, sans-serif";
   font-size: 14px;
-  max-width:450px;
+  max-width:none;
   box-align:right;
+  margin: 0;
   margin-right: 20px;
 }
 .aside {
   border:0; 
   border-spacing:0; 
   padding-top:5px; 
+  padding: 14px 18px;
   background-color:#F4EAC8;
   font-family: "Arial, Helvetica, sans-serif";
   font-size: 14px;
+  margin: 24px 0;
+  border-left: 5px solid #315C3D;
+}
+.aside p {
+  margin: 0;
 }
 .about {
   width:170px;
@@ -139,29 +156,35 @@ a:active {
   background-color: #EFE7CE;
 }
 .plants {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 1.25rem;
-width:100%;
-max-width: 720px;
-margin: 0 auto;
-border: 1px solid #D5CCAE;
-padding: 15px;
-background-color: #F8F4E7;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 720px;
+  margin: 30px auto 50px;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+}
+
+.plant-card {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #D5CCAE;
+  padding: 15px;
+  overflow-wrap: break-word;
+}
+
+.plant-card h3 {
+  color: #315C3D;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 #plants {
   max-width: 720px;
   text-align: center;
   margin: 0 auto;
-}
-.plant-card {
-  border: 1px solid #D5CCAE;
-  padding: 15px;
-}
-.plant-card h3 {
-  color: #315C3D;
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 .content {
   width: 100%;
@@ -185,12 +208,17 @@ background-color: #F8F4E7;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: #315C3D;
+}
+.hero {
+  padding: 50px 0;
+
 }
 .hero > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  gap: 40px;
+  align-items: center;
 }
 .about-layout {
   display: flex;
@@ -204,17 +232,19 @@ background-color: #F8F4E7;
   display: block;
   border: 1px solid #9E9475;
 }
-#containter {
+#container {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #F8F4E7;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Responsive Layout */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   #container {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -241,6 +271,7 @@ background-color: #F8F4E7;
 
   /* Hero */
   .hero > div {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -261,7 +292,8 @@ background-color: #F8F4E7;
   .plants {
     grid-template-columns: 1fr;
     width: 100%;
-    padding: 1rem;
+    max-width: 100%;
+    padding: 0;
   }
 
   .plant-card {
@@ -334,5 +366,8 @@ background-color: #F8F4E7;
   .hero img,
   .about-layout img {
     max-width: 250px;
+  }
+  main {
+    padding: 0 15px 25px;
   }
 }
