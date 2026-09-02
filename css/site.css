@@ -50,6 +50,12 @@ h2 {
   margin-bottom: 8px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a:hover {
   color: #993300;
 }
@@ -151,9 +157,41 @@ a:active {
   gap: 1.875rem;
 }
 .quick-links {
-  width: 190px;
-  margin: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
   background-color: #EFE7CE;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+.quick-links ul {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.quick-links li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  min-width: 0;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+.quick-links li img {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+}
+.quick-links li a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.quick-links-nav {
+  min-width: 0;
+  width: 100%;
 }
 .plants {
   display: grid;
@@ -167,7 +205,6 @@ a:active {
   background: none;
   border: none;
 }
-
 .plant-card {
   min-width: 0;
   box-sizing: border-box;
@@ -175,7 +212,6 @@ a:active {
   padding: 15px;
   overflow-wrap: break-word;
 }
-
 .plant-card h3 {
   color: #315C3D;
   margin-top: 0;
@@ -189,15 +225,27 @@ a:active {
 .content {
   width: 100%;
   max-width: 720px;
-  border: 0;
-  border-spacing: 0;
-  padding-top: 0;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 0;
 }
 .content-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
   gap: 1.25rem;
+  width: 100%;
+  min-width: 0;
 }
+.content-layout > div {
+  min-width: 0;
+}
+#services,
+#about {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 .footer-bar {
   column-span:3;
   height:12px;
@@ -222,15 +270,30 @@ a:active {
 }
 .about-layout {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 .about-layout .spacer {
-  flex-shrink: 0;
+  flex: 0 1 170px;
+  max-width: 170px;
+  min-width: 0;
 }
 .about-layout img {
   display: block;
+  width: 100%;
+  max-width: 170px;
+  height: auto;
   border: 1px solid #9E9475;
+  box-sizing: border-box;
+}
+.about-layout > div:last-child {
+  flex: 1 1 250px;
+  min-width: 0;
+  max-width: 100%;
 }
 #container {
   max-width: 960px;
@@ -304,37 +367,73 @@ a:active {
 
   /* Quick Links + Content */
   .content {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-width: 0;
   }
 
   .content-layout {
-    grid-template-columns: 1fr;
-    justify-items: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 1.5rem;
   }
 
-  .quick-links {
-    width: 100%;
-    max-width: 300px;
+  .content-layout > div {
+  width: 100%;
+  min-width: 0;
   }
 
-  #services,
+.quick-links-nav {
+width: 100%;
+min-width: 0;
+}
+
+.quick-links {
+width: 100%;
+max-width: 300px;
+margin: 0 auto;
+}
+
+#services,
   #about {
-    text-align: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  text-align: center;
+  overflow-wrap: break-word;
   }
 
   /* About Section */
-  .about-layout {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  gap: 1rem;
   }
 
-  .about-layout img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  .about-layout .spacer {
+  width: 100%;
+  max-width: 300px;
+  flex: none;
   }
+  .about-layout img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  }
+
+  .about-layout > div:last-child {
+  width: 100%;
+  max-width: 100%;
+  flex: none;
+  min-width: 0;
+  }
+
 
   /* Visit Section */
   #visit {
@@ -356,18 +455,30 @@ a:active {
   }
 
   .navcell {
-    max-width: 100%;
+  max-width: 100%;
   }
 
   .quick-links {
-    max-width: 100%;
+  max-width: 100%;
   }
 
   .hero img,
   .about-layout img {
-    max-width: 250px;
+  max-width: 250px;
   }
   main {
-    padding: 0 15px 25px;
+  padding: 0 15px 25px;
+  }
+  .about-layout .spacer {
+  max-width: 250px;
+  }
+
+  .about-layout img {
+  max-width: 250px;
+  }
+
+  #services,
+  #about {
+  overflow-wrap: anywhere;
   }
 }
