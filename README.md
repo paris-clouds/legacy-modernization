@@ -51,6 +51,16 @@ Next Sprint
 
 Next, I’ll make the website responsive to all devices. Fix the layout of the text, like the font size, and images. Also to fix the spacing and padding as well.
 
-https://paris-clouds.github.io/legacy-modernization/
-
 WEEK 3, SPRINT 2
+Updated September 2026 by Paris Lopez from NVC WebWorks
+
+Problem 1
+Site was not responsive. Made changes to make it responsive across all devices. Made that change so it would be accessible and easier to navigate.
+
+Problem 2
+Added grids to fix the page layout. Was overflowing in containers, so I added it to the visit, plants, content-layout, and hero sections.
+
+Problem 3
+Added flexbox to the about, nav, contact-info, and navcell sections so the overflow and poor spacing didn’t happen.
+
+https://paris-clouds.github.io/legacy-modernization/
