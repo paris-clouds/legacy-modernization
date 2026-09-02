@@ -144,9 +144,15 @@ grid-template-columns: repeat(3, 1fr);
 gap: 1.25rem;
 width:100%;
 max-width: 720px;
+margin: 0 auto;
 border: 1px solid #D5CCAE;
 padding: 15px;
 background-color: #F8F4E7;
+}
+#plants {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto;
 }
 .plant-card {
   border: 1px solid #D5CCAE;
@@ -200,5 +206,133 @@ background-color: #F8F4E7;
 }
 #containter {
   max-width: 960px;
-  margin: 0% auto;
+  margin: 0 auto;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+
+  #container {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Header */
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+  }
+
+  /* Navigation */
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navcell {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Hero */
+  .hero > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  /* Plants */
+  .plants {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .plant-card {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Quick Links + Content */
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .quick-links {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #services,
+  #about {
+    text-align: center;
+  }
+
+  /* About Section */
+  .about-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-layout img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Visit Section */
+  #visit {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+
+  .plants {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-card {
+    padding: 1rem;
+  }
+
+  .navcell {
+    max-width: 100%;
+  }
+
+  .quick-links {
+    max-width: 100%;
+  }
+
+  .hero img,
+  .about-layout img {
+    max-width: 250px;
+  }
 }
